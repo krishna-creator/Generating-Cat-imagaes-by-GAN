@@ -3,10 +3,6 @@ from torch.nn.functional import binary_cross_entropy_with_logits as bce_loss
 
 def discriminator_loss(logits_real, logits_fake):
     """
-    Computes the discriminator loss for the original GAN.
-    
-    Use the torch.nn.functional.binary_cross_entropy_with_logits rather than softmax followed by BCELoss.
-    
     Inputs:
     - logits_real: PyTorch Tensor of shape (N,) giving scores for the real data.
     - logits_fake: PyTorch Tensor of shape (N,) giving scores for the fake data.
@@ -23,10 +19,6 @@ def discriminator_loss(logits_real, logits_fake):
 
 def generator_loss(logits_fake):
     """
-    Computes the generator loss for the original GAN.
-    
-    Use the torch.nn.functional.binary_cross_entropy_with_logits rather than softmax followed by BCELoss.
-
     Inputs:
     - logits_fake: PyTorch Tensor of shape (N,) giving scores for the fake data.
     
